@@ -4,28 +4,28 @@
    ========================================================================== */
 
 :root {
-  /* Brand palette */
-  --color-navy-950: #0c1830;
-  --color-navy-900: #111f3f;
-  --color-navy-800: #17294f;
-  --color-navy-700: #1f3562;
-  --color-navy-600: #2b4478;
-  --color-navy-100: #e7ebf5;
-  --color-navy-50:  #f3f5fb;
+  /* Brand palette — Ink / Navy / Blue / Coral / Paper */
+  --color-navy-950: #0b1220; /* Ink */
+  --color-navy-900: #143562; /* Navy */
+  --color-navy-800: #1e4677;
+  --color-navy-700: #35608f; /* Blue */
+  --color-navy-600: #4b7ab0;
+  --color-navy-100: #e4ecf5;
+  --color-navy-50:  #fff3ef; /* Paper */
 
-  --color-gold-600: #b9862f;
-  --color-gold-500: #d4a017;
-  --color-gold-400: #e8b94a;
-  --color-gold-100: #fbf1da;
+  --color-gold-600: #c43f3a; /* Coral, darkened for text contrast */
+  --color-gold-500: #ff6b6b; /* Coral */
+  --color-gold-400: #ff8f86; /* Coral, lightened for use on dark backgrounds */
+  --color-gold-100: #ffe3df;
 
-  --color-teal-600: #1f7a68;
-  --color-teal-500: #2e8b7c;
-  --color-teal-100: #e2f3ef;
+  --color-teal-600: #2a4d76;
+  --color-teal-500: #35608f; /* Blue */
+  --color-teal-100: #e7eff7;
 
-  --color-ink: #1b2130;
-  --color-ink-soft: #4b5468;
-  --color-line: #dfe3ee;
-  --color-bg: #f7f8fb;
+  --color-ink: #17202e;
+  --color-ink-soft: #4b5568;
+  --color-line: #e6dad3;
+  --color-bg: #fff8f5;
   --color-surface: #ffffff;
 
   --color-success: #1f7a4d;
@@ -51,9 +51,9 @@
   --radius-lg: 22px;
   --radius-pill: 999px;
 
-  --shadow-sm: 0 1px 2px rgba(17, 31, 63, 0.06), 0 1px 1px rgba(17, 31, 63, 0.04);
-  --shadow-md: 0 8px 24px rgba(17, 31, 63, 0.08);
-  --shadow-lg: 0 20px 45px rgba(17, 31, 63, 0.14);
+  --shadow-sm: 0 1px 2px rgba(11, 18, 32, 0.06), 0 1px 1px rgba(11, 18, 32, 0.04);
+  --shadow-md: 0 8px 24px rgba(11, 18, 32, 0.08);
+  --shadow-lg: 0 20px 45px rgba(11, 18, 32, 0.14);
 
   --container: 1160px;
 }
@@ -288,7 +288,15 @@ p { margin: 0 0 var(--space-4); color: var(--color-ink-soft); }
   .nav-toggle { display: flex; }
   .nav-links {
     position: fixed;
-    inset: 65px 0 0 0;
+    /* .site-header uses backdrop-filter, which makes it (not the viewport) the
+       containing block for fixed descendants — top:100% anchors to its actual
+       rendered height instead of a hardcoded value, and height:100vh (a
+       viewport-relative unit, unaffected by that containing block) guarantees
+       enough room regardless, with any excess simply off-screen. */
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 100vh;
     background: var(--color-surface);
     flex-direction: column;
     align-items: stretch;
@@ -307,7 +315,7 @@ p { margin: 0 0 var(--space-4); color: var(--color-ink-soft); }
 
 /* ---------- Hero ---------- */
 .hero {
-  background: radial-gradient(1200px 600px at 85% -10%, rgba(212,160,23,0.22), transparent 60%), linear-gradient(160deg, var(--color-navy-950), var(--color-navy-800));
+  background: radial-gradient(1200px 600px at 85% -10%, rgba(255,107,107,0.18), transparent 60%), linear-gradient(160deg, var(--color-navy-950), var(--color-navy-800));
   color: #fff;
   padding-block: var(--space-9) var(--space-8);
   position: relative;
@@ -438,7 +446,7 @@ p { margin: 0 0 var(--space-4); color: var(--color-ink-soft); }
   margin-top: 3px;
   border-radius: 50%;
   background: var(--color-teal-100);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%231f7a68' stroke-width='2.5'%3E%3Cpath d='M4 10.5l3.5 3.5L16 6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%232a4d76' stroke-width='2.5'%3E%3Cpath d='M4 10.5l3.5 3.5L16 6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 12px;
@@ -505,8 +513,8 @@ table.rates-table td strong { color: var(--color-navy-950); }
   gap: var(--space-5);
   align-items: flex-start;
 }
-.callout.gold { background: var(--color-gold-100); border-color: #f0dcaa; }
-.callout.teal { background: var(--color-teal-100); border-color: #c9e7de; }
+.callout.gold { background: var(--color-gold-100); border-color: #ffd3cd; }
+.callout.teal { background: var(--color-teal-100); border-color: #c8d8ec; }
 .callout h3 { margin-bottom: var(--space-2); }
 .callout p:last-child { margin-bottom: 0; }
 
