@@ -198,18 +198,21 @@ p { margin: 0 0 var(--space-4); color: var(--color-ink-soft); }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: var(--space-5);
+  flex-wrap: nowrap;
+  gap: 1.1rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .nav-links a {
+  display: inline-block;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--color-ink);
   padding: var(--space-2) 0;
   border-bottom: 2px solid transparent;
+  white-space: nowrap;
 }
 .nav-links a:hover,
 .nav-links a[aria-current="page"] {
@@ -226,27 +229,35 @@ p { margin: 0 0 var(--space-4); color: var(--color-ink-soft); }
   list-style: none;
   margin: 0;
   padding: var(--space-2);
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%) translateY(4px);
   min-width: 220px;
   background: var(--color-surface);
   border: 1px solid var(--color-line);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s ease, transform 0.15s ease;
   z-index: 50;
 }
-.nav-item-dropdown:hover .nav-dropdown,
-.nav-item-dropdown:focus-within .nav-dropdown {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+/* Desktop-only flyout behaviour — hover/focus reveal, absolute positioning.
+   Scoped to the same breakpoint as the mobile menu switch below so it can
+   never fight the mobile tap-to-expand behaviour (:focus-within would
+   otherwise re-apply this transform the moment a tapped link gets focus). */
+@media (min-width: 1181px) {
+  .nav-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+  }
+  .nav-item-dropdown:hover .nav-dropdown,
+  .nav-item-dropdown:focus-within .nav-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+  .nav-item-dropdown:hover > a svg { transform: rotate(180deg); }
 }
-.nav-item-dropdown:hover > a svg { transform: rotate(180deg); }
 .nav-dropdown li a {
   display: block;
   padding: var(--space-3) var(--space-4);
@@ -257,7 +268,7 @@ p { margin: 0 0 var(--space-4); color: var(--color-ink-soft); }
 }
 .nav-dropdown li a:hover { background: var(--color-navy-50); color: var(--color-navy-900); }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .nav-dropdown {
     position: static;
     opacity: 1;
@@ -284,7 +295,7 @@ p { margin: 0 0 var(--space-4); color: var(--color-ink-soft); }
 }
 .nav-toggle svg { width: 20px; height: 20px; }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .nav-toggle { display: flex; }
   .nav-links {
     position: fixed;

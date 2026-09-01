@@ -2,10 +2,11 @@
   "use strict";
 
   var ACCOUNTS = {
-    "easy-access": { label: "Business Easy Access", rate: 3.85 },
-    "notice-95": { label: "Business 95-Day Notice", rate: 4.25 },
-    "bond-1": { label: "1 Year Fixed Rate Bond", rate: 4.55 },
-    "bond-2": { label: "2 Year Fixed Rate Bond", rate: 4.35 }
+    "bonus-saver": { label: "Business Bonus Saver", rate: 4.16 },
+    "notice-90": { label: "90 Day Notice", rate: 4.10 },
+    "notice-35": { label: "35 Day Notice", rate: 3.85 },
+    "notice-7": { label: "7 Day Notice", rate: 2.25 },
+    "no-notice": { label: "No Notice", rate: 2.00 }
   };
 
   var accountEl = document.getElementById("calc-account");
@@ -37,14 +38,11 @@
     if (chosen) {
       rateEl.value = chosen.rate.toFixed(2);
     }
-    var isFixed = accountEl.value.indexOf("bond") === 0;
-    monthlyEl.disabled = isFixed;
-    if (isFixed) monthlyEl.value = 0;
     calculate();
   }
 
   function calculate() {
-    var deposit = clampNumber(parseFloat(depositEl.value), 0, 5000000);
+    var deposit = clampNumber(parseFloat(depositEl.value), 0, 500000);
     var monthly = clampNumber(parseFloat(monthlyEl.value), 0, 100000);
     var ratePct = clampNumber(parseFloat(rateEl.value), 0, 15);
     var years = clampNumber(parseInt(yearsEl.value, 10), 1, 10);
