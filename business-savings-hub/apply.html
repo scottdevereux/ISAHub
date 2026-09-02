@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Account Application | Earl Shilton Building Society</title>
+<meta name="description" content="Apply online for a business, club or charity savings account with Earl Shilton Building Society. Dynamic form tailored to your business type.">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container header-bar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">ES</span>
+      <span class="brand-text"><strong>Earl Shilton BS</strong><span>Business Savings Hub</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-item-dropdown">
+          <a href="index.html#business-accounts" aria-haspopup="true">Business Accounts <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="nav-dropdown">
+            <li><a href="bonus-saver.html">Business Bonus Saver</a></li>
+            <li><a href="notice-90-day.html">90 Day Notice</a></li>
+            <li><a href="notice-35-day.html">35 Day Notice</a></li>
+            <li><a href="notice-7-day.html">7 Day Notice</a></li>
+            <li><a href="no-notice.html">No Notice</a></li>
+          </ul>
+        </li>
+        <li><a href="business-types.html">Business Types</a></li>
+        <li><a href="application-guide.html">Application Guide</a></li>
+        <li><a href="help-guides.html">Help Guides</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-navy btn-sm" href="apply.html" aria-current="page">Open an account</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>Business Account Application</span></div>
+      <span class="tag" style="background:rgba(255,255,255,0.14);color:#fff;">Online application</span>
+      <h1 style="margin-top:1rem;">Open a business, club or charity account</h1>
+      <p class="lede">One form, tailored to your organisation. Tell us your business type below and we'll show you exactly what we need — no irrelevant questions.</p>
+      <div class="badge-row">
+        <span class="badge">UK residents &amp; UK organisations only</span>
+        <span class="badge">Takes about 10 minutes</span>
+        <span class="badge">FSCS protected up to £120,000</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="disclaimer-strip">
+    <div class="container">
+      This is a concept application form for demonstration purposes. Submissions are sent securely to our business team but no live account will be opened as a result of this demo.
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+
+        <div id="form-success" class="form-banner success hidden-section" role="status" tabindex="-1">
+          <h2 class="mt-0">Application received</h2>
+          <p>Thank you — we've received your application and sent a confirmation to the email address you provided.</p>
+          <ul class="feature-list">
+            <li>We'll contact any controlling individuals or senior managers named on this form to confirm they're happy for the account to be opened.</li>
+            <li>We'll review your application and, if we need any further documentation (for example HMRC correspondence, evidence of trading, or a partnership deed), we'll be in touch to request it securely.</li>
+            <li>Once everything checks out, we'll open the account and send you your paying-in details.</li>
+            <li>We aim to open accounts within five working days of receiving a complete application, unless further documentation is needed.</li>
+          </ul>
+          <a class="btn btn-navy" href="index.html">Back to homepage</a>
+        </div>
+
+        <div id="form-error" class="form-banner error hidden-section" role="alert">
+          <h3 class="mt-0">We couldn't submit your application</h3>
+          <p>Something went wrong sending your details. Please try again, or contact us directly so we can help.</p>
+          <a class="btn btn-ghost" href="contact.html">Contact our business team</a>
+        </div>
+
+        <form id="apply-form" novalidate>
+
+          <h2 id="your-details" class="mt-0">1. Your details</h2>
+          <p class="field-hint" style="margin-bottom:var(--space-4);">The person registered for Online Services who will operate this account day to day.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="full_name">Full name</label>
+              <input type="text" id="full_name" name="full_name" required autocomplete="name">
+              <p class="field-error-msg">Please enter your full name.</p>
+            </div>
+            <div class="grid grid-2" style="gap:var(--space-4);">
+              <div class="field">
+                <label for="date_of_birth">Date of birth</label>
+                <input type="date" id="date_of_birth" name="date_of_birth" required>
+                <p class="field-error-msg">Please enter your date of birth.</p>
+              </div>
+              <div class="field">
+                <label for="nationality">Nationality</label>
+                <input type="text" id="nationality" name="nationality" required>
+                <p class="field-error-msg">Please enter your nationality.</p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="residential_address">Residential address</label>
+              <textarea class="field-textarea" id="residential_address" name="residential_address" required placeholder="Address line 1, address line 2, town, postcode"></textarea>
+              <p class="field-error-msg">Please enter your residential address.</p>
+            </div>
+            <div class="grid grid-2" style="gap:var(--space-4);">
+              <div class="field">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+                <p class="field-error-msg">Please enter a valid email address.</p>
+              </div>
+              <div class="field">
+                <label for="phone">Contact phone number</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                <p class="field-error-msg">Please enter a contact number.</p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="role_in_business">Your role within the business</label>
+              <input type="text" id="role_in_business" name="role_in_business" required placeholder="e.g. Director, Treasurer, Partner, Trustee">
+              <p class="field-error-msg">Please enter your role.</p>
+            </div>
+            <div class="field">
+              <label>Are you a citizen and tax resident of the UK only?</label>
+              <div class="option-grid cols-2">
+                <label class="radio-option"><input type="radio" name="applicant_uk_tax_resident" value="yes" required><span><strong>Yes</strong></span></label>
+                <label class="radio-option"><input type="radio" name="applicant_uk_tax_resident" value="no" required><span><strong>No</strong></span></label>
+              </div>
+              <p class="field-error-msg">Please answer this question.</p>
+              <div id="applicant-tax-note" class="callout gold hidden-section" style="margin-top:var(--space-3);">
+                <div><p style="margin:0;">No problem — we'll be in touch separately to send you a Tax Residency Self Certification Form to complete alongside this application.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <h2 id="account-details">2. The account you're opening</h2>
+          <div class="form-grid">
+            <div class="field">
+              <label for="account_type">Account type</label>
+              <select id="account_type" name="account_type" required>
+                <option value="" disabled selected>Choose an account</option>
+                <option value="bonus-saver" data-min="1" data-max="500000">Business Bonus Saver — 4.16% gross p.a./AER, no notice</option>
+                <option value="notice-90-day" data-min="1000" data-max="500000">90 Day Notice — 4.10% gross p.a./AER</option>
+                <option value="notice-35-day" data-min="1000" data-max="500000">35 Day Notice — 3.85% gross p.a./AER</option>
+                <option value="notice-7-day" data-min="10000" data-max="500000">7 Day Notice — 2.25% gross p.a./AER</option>
+                <option value="no-notice" data-min="10000" data-max="500000">No Notice — 2.00% gross p.a./AER</option>
+              </select>
+              <p class="field-error-msg">Please choose an account.</p>
+            </div>
+            <div class="field">
+              <label for="initial_deposit">Initial deposit (£)</label>
+              <input type="number" id="initial_deposit" name="initial_deposit" required min="0" step="1">
+              <p class="field-hint" id="deposit-hint">Choose an account above to see its minimum and maximum deposit.</p>
+              <p class="field-error-msg" id="deposit-error-msg">Please enter a deposit within this account's limits.</p>
+            </div>
+            <div class="field">
+              <label for="how_did_you_hear">Where did you hear about us?</label>
+              <select id="how_did_you_hear" name="how_did_you_hear">
+                <option value="">Prefer not to say</option>
+                <option>Existing member or customer</option>
+                <option>Branch visit</option>
+                <option>Online search</option>
+                <option>Social media</option>
+                <option>Recommended by another business</option>
+                <option>Advertising</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <h2 id="organisation-details">3. Details of your organisation</h2>
+          <div class="form-grid">
+            <div class="field">
+              <label for="org_name">Name of organisation</label>
+              <input type="text" id="org_name" name="org_name" required>
+              <p class="field-error-msg">Please enter the organisation's name.</p>
+            </div>
+            <div class="field">
+              <label for="org_trading_name">Trading name (if different)</label>
+              <input type="text" id="org_trading_name" name="org_trading_name">
+            </div>
+            <div class="field">
+              <label for="org_registered_address">Organisation's registered address</label>
+              <textarea class="field-textarea" id="org_registered_address" name="org_registered_address" required placeholder="Address line 1, address line 2, town, postcode"></textarea>
+              <p class="field-error-msg">Please enter the registered address.</p>
+            </div>
+            <div class="field">
+              <label for="org_phone">Telephone number</label>
+              <input type="tel" id="org_phone" name="org_phone" required>
+              <p class="field-error-msg">Please enter a telephone number.</p>
+            </div>
+            <div class="field">
+              <label class="badge-row" style="margin-top:0;"><input type="checkbox" id="correspondence_same" checked style="width:18px;height:18px;accent-color:var(--color-navy-900);"> <span>Correspondence address is the same as the registered address</span></label>
+            </div>
+            <div id="correspondence-fields" class="field hidden-section">
+              <label for="org_correspondence_address">Correspondence address</label>
+              <textarea class="field-textarea" id="org_correspondence_address" name="org_correspondence_address" placeholder="Address line 1, address line 2, town, postcode"></textarea>
+            </div>
+            <div class="field">
+              <label>Is the organisation resident for tax purposes in the UK only?</label>
+              <div class="option-grid cols-2">
+                <label class="radio-option"><input type="radio" name="org_uk_tax_resident" value="yes" required><span><strong>Yes</strong></span></label>
+                <label class="radio-option"><input type="radio" name="org_uk_tax_resident" value="no" required><span><strong>No</strong></span></label>
+              </div>
+              <p class="field-error-msg">Please answer this question.</p>
+              <div id="org-tax-note" class="callout gold hidden-section" style="margin-top:var(--space-3);">
+                <div><p style="margin:0;">No problem — please contact us so we can send a Tax Residency Self Certification Declaration Form for an Organisation.</p></div>
+              </div>
+            </div>
+            <div class="field">
+              <label for="fca_number">FCA number <span style="font-weight:400;color:var(--color-ink-soft);">(if your organisation is FCA-registered)</span></label>
+              <input type="text" id="fca_number" name="fca_number">
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <h2 id="business-type">4. Your business type</h2>
+          <p class="field-hint" style="margin-bottom:var(--space-4);">This decides which extra questions we ask below — see our full <a href="business-types.html">Business Types guide</a> if you're not sure which applies to you.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="business_type">Business type</label>
+              <select id="business_type" name="business_type" required>
+                <option value="" disabled selected>Choose your business type</option>
+                <option value="sole-trader" data-section="c">Sole Trader / Freelancer</option>
+                <option value="partnership" data-section="c">Partnership</option>
+                <option value="limited-company" data-section="a">Limited Company (Ltd)</option>
+                <option value="charity" data-section="charity">Charity / Non-Profit</option>
+                <option value="club-society" data-section="b">Club or Society</option>
+                <option value="trust-pension" data-section="c">Trust or Pension Scheme</option>
+                <option value="credit-union" data-section="a">Credit Union or Cooperative</option>
+              </select>
+              <p class="field-error-msg">Please choose your business type.</p>
+            </div>
+
+            <div id="charity-structure-field" class="field hidden-section">
+              <label>Is your charity incorporated (for example a CIO) or unincorporated?</label>
+              <div class="option-grid cols-2">
+                <label class="radio-option"><input type="radio" name="charity_structure" value="incorporated"><span><strong>Incorporated</strong><br><span>e.g. Charitable Incorporated Organisation (CIO)</span></span></label>
+                <label class="radio-option"><input type="radio" name="charity_structure" value="unincorporated"><span><strong>Unincorporated</strong><br><span>e.g. unincorporated association or trust-based charity</span></span></label>
+              </div>
+              <p class="field-error-msg">Please choose one.</p>
+            </div>
+
+            <div id="type-note" class="callout gold hidden-section">
+              <div><p id="type-note-text" style="margin:0;"></p></div>
+            </div>
+
+            <div class="field">
+              <label>Will this account hold money on behalf of clients?</label>
+              <p class="field-hint">For example, if you're a solicitor, letting or estate agent, or another regulated business holding client funds.</p>
+              <div class="option-grid cols-2">
+                <label class="radio-option"><input type="radio" name="holds_client_money" value="yes"><span><strong>Yes</strong></span></label>
+                <label class="radio-option"><input type="radio" name="holds_client_money" value="no" checked><span><strong>No</strong></span></label>
+              </div>
+              <div id="client-money-note" class="callout teal hidden-section" style="margin-top:var(--space-3);">
+                <div>
+                  <p style="margin:0 0 var(--space-2);">FSCS protection can work differently for client money accounts — see our <a href="business-types.html#client-money">Client Money Accounts guide</a>. We'll also need evidence of your regulatory authorisation or professional body membership.</p>
+                  <div class="field" style="margin:0;">
+                    <label for="regulatory_body">Regulator or professional body (e.g. SRA, ARLA, RICS)</label>
+                    <input type="text" id="regulatory_body" name="regulatory_body">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <div id="org-specifics-wrapper">
+
+            <div id="section-a" class="hidden-section">
+              <h2 id="section-a-heading">Organisation details — Limited Company / Incorporated Charity</h2>
+              <div class="form-grid">
+                <div class="grid grid-2" style="gap:var(--space-4);">
+                  <div class="field">
+                    <label for="company_registration_number">Company registration number</label>
+                    <input type="text" id="company_registration_number" name="company_registration_number">
+                  </div>
+                  <div class="field">
+                    <label for="charity_registration_number_a">Registered charity number <span style="font-weight:400;color:var(--color-ink-soft);">(if applicable)</span></label>
+                    <input type="text" id="charity_registration_number_a" name="charity_registration_number_a">
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="principal_activity_a">Principal activity / purpose of business or charity</label>
+                  <textarea class="field-textarea" id="principal_activity_a" name="principal_activity_a"></textarea>
+                </div>
+                <div class="grid grid-3" style="gap:var(--space-4);">
+                  <div class="field">
+                    <label for="num_directors_a">Number of directors</label>
+                    <input type="number" id="num_directors_a" name="num_directors_a" min="0">
+                  </div>
+                  <div class="field">
+                    <label for="num_employees_a">Number of employees</label>
+                    <input type="number" id="num_employees_a" name="num_employees_a" min="0">
+                  </div>
+                  <div class="field">
+                    <label for="annual_turnover_a">Annual turnover (£)</label>
+                    <input type="number" id="annual_turnover_a" name="annual_turnover_a" min="0">
+                  </div>
+                </div>
+                <div class="field">
+                  <label>Please confirm the organisation is</label>
+                  <div class="option-grid cols-2">
+                    <label class="radio-option"><input type="radio" name="org_structure_a" value="private-limited"><span><strong>Private limited company</strong></span></label>
+                    <label class="radio-option"><input type="radio" name="org_structure_a" value="public-limited"><span><strong>Public limited company</strong></span></label>
+                    <label class="radio-option"><input type="radio" name="org_structure_a" value="limited-by-guarantee"><span><strong>Company limited by guarantee</strong></span></label>
+                    <label class="radio-option"><input type="radio" name="org_structure_a" value="other"><span><strong>Other</strong></span></label>
+                  </div>
+                  <input type="text" id="org_structure_a_other" name="org_structure_a_other" placeholder="If Other, please specify" style="margin-top:var(--space-3);" class="hidden-section">
+                </div>
+              </div>
+            </div>
+
+            <div id="section-b" class="hidden-section">
+              <h2 id="section-b-heading">Organisation details — Club, Society or Unincorporated Charity</h2>
+              <label class="checkbox-option" style="margin-bottom:var(--space-4);">
+                <input type="checkbox" id="confirm_not_body_corporate" name="confirm_not_body_corporate">
+                <span><strong>I confirm the organisation is not a body corporate or limited company.</strong></span>
+              </label>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="principal_activity_b">Principal activity / purpose of the charity or organisation</label>
+                  <textarea class="field-textarea" id="principal_activity_b" name="principal_activity_b"></textarea>
+                </div>
+                <div class="grid grid-2" style="gap:var(--space-4);">
+                  <div class="field">
+                    <label for="funds_obtained_from">Funds are being obtained from</label>
+                    <input type="text" id="funds_obtained_from" name="funds_obtained_from">
+                  </div>
+                  <div class="field">
+                    <label for="funds_for_benefit_of">For the benefit of</label>
+                    <input type="text" id="funds_for_benefit_of" name="funds_for_benefit_of">
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="charity_or_membership_number">Charity number / membership number <span style="font-weight:400;color:var(--color-ink-soft);">(if applicable)</span></label>
+                  <input type="text" id="charity_or_membership_number" name="charity_or_membership_number">
+                </div>
+                <div class="grid grid-3" style="gap:var(--space-4);">
+                  <div class="field">
+                    <label for="num_officers_b">Number of committee members / trustees</label>
+                    <input type="number" id="num_officers_b" name="num_officers_b" min="0">
+                  </div>
+                  <div class="field">
+                    <label for="num_employees_b">Number of employees</label>
+                    <input type="number" id="num_employees_b" name="num_employees_b" min="0">
+                  </div>
+                  <div class="field">
+                    <label for="annual_turnover_b">Annual turnover (£)</label>
+                    <input type="number" id="annual_turnover_b" name="annual_turnover_b" min="0">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="section-c" class="hidden-section">
+              <h2 id="section-c-heading">Organisation details — Sole Trader, Partnership or Incorporated Association</h2>
+              <div class="form-grid">
+                <div class="field">
+                  <label>Please confirm the organisation is</label>
+                  <div class="option-grid cols-2">
+                    <label class="radio-option"><input type="radio" name="org_structure_c" value="sole-trader"><span><strong>Sole trader</strong></span></label>
+                    <label class="radio-option"><input type="radio" name="org_structure_c" value="partnership"><span><strong>Partnership</strong></span></label>
+                    <label class="radio-option"><input type="radio" name="org_structure_c" value="incorporated-association"><span><strong>Incorporated association</strong></span></label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="principal_activity_c">Principal activity / purpose of business</label>
+                  <textarea class="field-textarea" id="principal_activity_c" name="principal_activity_c"></textarea>
+                </div>
+                <div class="grid grid-2" style="gap:var(--space-4);">
+                  <div class="field">
+                    <label for="date_commenced_trading">Date commenced trading</label>
+                    <input type="date" id="date_commenced_trading" name="date_commenced_trading">
+                  </div>
+                  <div class="field">
+                    <label for="annual_expected_turnover_c">Annual expected turnover (£)</label>
+                    <input type="number" id="annual_expected_turnover_c" name="annual_expected_turnover_c" min="0">
+                  </div>
+                </div>
+                <div class="grid grid-2" style="gap:var(--space-4);">
+                  <div class="field">
+                    <label for="num_employees_c">Number of employees <span style="font-weight:400;color:var(--color-ink-soft);">(if applicable)</span></label>
+                    <input type="number" id="num_employees_c" name="num_employees_c" min="0">
+                  </div>
+                  <div class="field">
+                    <label for="num_partners_c">Number of partners / associates <span style="font-weight:400;color:var(--color-ink-soft);">(if applicable)</span></label>
+                    <input type="number" id="num_partners_c" name="num_partners_c" min="0">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <hr class="divider">
+
+          <h2 id="controlling-individuals">5. Controlling individuals</h2>
+          <p>This section must be completed in all cases. The first-named person will act as the representative shareholder or officer, authorised to attend meetings and exercise membership rights on behalf of the organisation's controlling individuals.</p>
+          <p>Under Anti-Money Laundering (AML), Common Reporting Standard (CRS) and Foreign Account Tax Compliance Act (FATCA) requirements, we must identify individuals who own or control more than 25% of the organisation's share capital, profits or voting rights, or otherwise exercise significant control, and obtain relevant tax residency information. If no such individual exists, provide the details of the senior managing official(s), such as a director, trustee or managing partner. For organisations limited by guarantee, provide the details of the senior member(s) who exercise control.</p>
+
+          <div id="people-list"></div>
+          <button type="button" id="add-person" class="btn btn-ghost" style="margin-top:var(--space-2);">+ Add another controlling individual</button>
+          <p class="field-hint">Up to 3 people can be added to this application.</p>
+
+          <hr class="divider">
+
+          <h2 id="bank-details">6. Withdrawal &amp; mandate bank details</h2>
+          <p>Interest will be added to the account annually. All withdrawals will be made only to the nominated business bank account below.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="bank_name">Bank / building society name</label>
+              <input type="text" id="bank_name" name="bank_name" required>
+              <p class="field-error-msg">Please enter the bank name.</p>
+            </div>
+            <div class="field">
+              <label for="bank_account_name">Account name</label>
+              <input type="text" id="bank_account_name" name="bank_account_name" required>
+              <p class="field-error-msg">Please enter the account name.</p>
+            </div>
+            <div class="grid grid-2" style="gap:var(--space-4);">
+              <div class="field">
+                <label for="bank_account_number">Account number</label>
+                <input type="text" id="bank_account_number" name="bank_account_number" required inputmode="numeric" pattern="[0-9]{6,8}" maxlength="8">
+                <p class="field-error-msg">Please enter a valid account number.</p>
+              </div>
+              <div class="field">
+                <label for="bank_sort_code">Sort code</label>
+                <input type="text" id="bank_sort_code" name="bank_sort_code" required inputmode="numeric" placeholder="00-00-00" maxlength="8">
+                <p class="field-error-msg">Please enter a valid sort code (00-00-00).</p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="bank_reference">Reference number <span style="font-weight:400;color:var(--color-ink-soft);">(optional)</span></label>
+              <input type="text" id="bank_reference" name="bank_reference">
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <h2 id="fscs-declaration">7. Deposit protection &amp; classification</h2>
+          <p>Earl Shilton Building Society is covered by the Financial Services Compensation Scheme (FSCS). The FSCS can pay compensation to depositors if a building society is unable to meet its financial obligations. Most depositors, including most individuals and businesses, are covered by the scheme — see our <a href="help-guides.html#fscs">FSCS guide</a> for a list of exclusions.</p>
+
+          <div class="field">
+            <label>Please tick if your organisation is excluded by the nature of its business</label>
+            <div class="option-grid cols-2">
+              <label class="checkbox-option"><input type="checkbox" name="exclusion" value="Credit institution"><span><strong>Credit institution</strong></span></label>
+              <label class="checkbox-option"><input type="checkbox" name="exclusion" value="Financial institution"><span><strong>Financial institution</strong></span></label>
+              <label class="checkbox-option"><input type="checkbox" name="exclusion" value="Investment firm"><span><strong>Investment firm</strong></span></label>
+              <label class="checkbox-option"><input type="checkbox" name="exclusion" value="Insurance undertaking"><span><strong>Insurance undertaking</strong></span></label>
+              <label class="checkbox-option"><input type="checkbox" name="exclusion" value="Reinsurance firm"><span><strong>Reinsurance firm</strong></span></label>
+              <label class="checkbox-option"><input type="checkbox" name="exclusion" value="Pension or retirement fund"><span><strong>Pension or retirement fund</strong></span></label>
+              <label class="checkbox-option"><input type="checkbox" name="exclusion" value="Collective investment undertaking"><span><strong>Collective investment undertaking</strong></span></label>
+              <label class="checkbox-option"><input type="checkbox" name="exclusion" value="Public authority (other than local authority)"><span><strong>Public authority, other than a local authority</strong></span></label>
+            </div>
+            <div id="exclusion-warning" class="callout gold hidden-section" style="margin-top:var(--space-3);">
+              <div><p style="margin:0;">Please contact our business team directly before completing this application, as excluded entities need additional handling that we can't process through this online form.</p></div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Business classification</label>
+            <p class="field-hint">We're required to record this classification when opening the account, and periodically thereafter.</p>
+            <div class="option-grid">
+              <label class="radio-option"><input type="radio" name="business_classification" value="micro" required><span><strong>Micro</strong><br><span>Fewer than 10 employees, and annual turnover or balance sheet not exceeding EUR 2 million</span></span></label>
+              <label class="radio-option"><input type="radio" name="business_classification" value="small" required><span><strong>Small</strong><br><span>Fewer than 50 employees, and annual turnover or balance sheet not exceeding EUR 10 million</span></span></label>
+              <label class="radio-option"><input type="radio" name="business_classification" value="medium" required><span><strong>Medium</strong><br><span>Fewer than 250 employees, and annual turnover not exceeding EUR 50 million or balance sheet not exceeding EUR 43 million</span></span></label>
+            </div>
+            <p class="field-error-msg">Please choose a classification.</p>
+          </div>
+
+          <hr class="divider">
+
+          <h2 id="declarations">8. Declaration &amp; consent</h2>
+          <p>For your own benefit and protection, you should carefully read the information and Terms and Conditions contained in this application form, including the declaration, before completing this form. If you don't understand any points, please ask for further information.</p>
+
+          <div class="callout" style="margin-bottom:var(--space-4);">
+            <div>
+              <h3>Declaration and undertaking</h3>
+              <p>By submitting this application, I confirm that:</p>
+              <ul class="feature-list">
+                <li>I have read, understood, and agree to the Account-specific Terms and Conditions and the Earl Shilton Building Society Retail Savings Accounts Terms and Conditions, which have been made available to me during this application process.</li>
+                <li>I undertake to notify Earl Shilton Building Society without delay if there is any change to the status or circumstances of the investor, including (but not limited to) any change in tax residency of the organisation or any controlling individuals, or if I move outside the United Kingdom.</li>
+                <li>I understand and consent that if I no longer reside in the UK, I will no longer be permitted to act as an officer on this account, and the account may be closed.</li>
+                <li>I certify that the organisation named in this application is the beneficial owner of all income to which this application relates, and that the information I've provided is, to the best of my knowledge and belief, true, correct and complete.</li>
+                <li>I acknowledge that I have accessed and reviewed the Deposit Guarantee Scheme Information Sheet as part of this application.</li>
+              </ul>
+            </div>
+          </div>
+
+          <label class="checkbox-option" style="margin-bottom:var(--space-4);">
+            <input type="checkbox" id="agree_terms" name="agree_terms" required>
+            <span><strong>I have read, understood and agree to the above declarations, and to the Society's Terms and Conditions.</strong></span>
+          </label>
+
+          <div class="callout teal" style="margin-bottom:var(--space-4);">
+            <div>
+              <h3>Data protection &amp; communications</h3>
+              <p style="margin:0;">Earl Shilton Building Society is the data controller of your personal information, and your personal data will be processed in accordance with the Society's Privacy Notice, available at <a href="https://www.esbs.co.uk" target="_blank" rel="noopener">www.esbs.co.uk</a>.</p>
+            </div>
+          </div>
+
+          <label class="checkbox-option" style="margin-bottom:var(--space-4);">
+            <input type="checkbox" id="agree_privacy" name="agree_privacy" required>
+            <span><strong>I consent to my personal data being processed as described in the Privacy Notice.</strong></span>
+          </label>
+
+          <div id="windfalls-field" class="hidden-section">
+            <div class="callout gold" style="margin-bottom:var(--space-4);">
+              <div>
+                <h3>Sole Traders &amp; Partnerships only</h3>
+                <p style="margin:0;">The Agreement of Windfalls to Charity is available at <a href="https://www.esbs.co.uk" target="_blank" rel="noopener">www.esbs.co.uk</a>.</p>
+              </div>
+            </div>
+            <label class="checkbox-option" style="margin-bottom:var(--space-4);">
+              <input type="checkbox" id="agree_windfalls" name="agree_windfalls">
+              <span><strong>I confirm I have read and agree to the Agreement of Windfalls to Charity.</strong></span>
+            </label>
+          </div>
+
+          <hr class="divider">
+
+          <h2 id="submit">9. Verify &amp; submit</h2>
+          <div class="field">
+            <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY" data-callback="onRecaptchaVerified" data-expired-callback="onRecaptchaExpired"></div>
+            <p class="field-error-msg" id="recaptcha-error-msg">Please confirm you're not a robot before submitting.</p>
+          </div>
+
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New business account application — Earl Shilton Business Savings Hub">
+          <input type="hidden" name="from_name" value="Business Savings Hub application form">
+
+          <button type="submit" id="submit-btn" class="btn btn-primary">Submit application</button>
+          <p class="field-hint">By submitting, you confirm everything above is accurate to the best of your knowledge.</p>
+        </form>
+      </div>
+
+      <aside class="sidebar-card">
+        <div class="card form-progress">
+          <h3 class="mt-0">Application progress</h3>
+          <ol id="progress-list">
+            <li data-target="your-details"><span class="step-dot">1</span><a href="#your-details">Your details</a></li>
+            <li data-target="account-details"><span class="step-dot">2</span><a href="#account-details">Your account</a></li>
+            <li data-target="organisation-details"><span class="step-dot">3</span><a href="#organisation-details">Organisation</a></li>
+            <li data-target="business-type"><span class="step-dot">4</span><a href="#business-type">Business type</a></li>
+            <li data-target="controlling-individuals"><span class="step-dot">5</span><a href="#controlling-individuals">Controlling individuals</a></li>
+            <li data-target="bank-details"><span class="step-dot">6</span><a href="#bank-details">Bank details</a></li>
+            <li data-target="fscs-declaration"><span class="step-dot">7</span><a href="#fscs-declaration">Protection &amp; classification</a></li>
+            <li data-target="declarations"><span class="step-dot">8</span><a href="#declarations">Declaration</a></li>
+            <li data-target="submit"><span class="step-dot">9</span><a href="#submit">Submit</a></li>
+          </ol>
+          <hr class="divider">
+          <h3>Not ready to apply?</h3>
+          <p>Check the documents you'll need first.</p>
+          <a class="btn btn-ghost btn-block" href="application-guide.html">Read the Application Guide</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<template id="person-template">
+  <div class="person-card" data-person="">
+    <div class="person-card-head">
+      <h3></h3>
+      <button type="button" class="btn-remove-person">Remove</button>
+    </div>
+    <div class="form-grid">
+      <div class="field">
+        <label>Full name</label>
+        <input type="text" data-field="full_name" required>
+        <p class="field-error-msg">Please enter a full name.</p>
+      </div>
+      <div class="grid grid-2" style="gap:var(--space-4);">
+        <div class="field">
+          <label>Date of birth</label>
+          <input type="date" data-field="date_of_birth">
+        </div>
+        <div class="field">
+          <label>Nationality</label>
+          <input type="text" data-field="nationality">
+        </div>
+      </div>
+      <div class="field">
+        <label>Permanent residential address, including postcode</label>
+        <textarea class="field-textarea" data-field="address"></textarea>
+      </div>
+      <div class="grid grid-2" style="gap:var(--space-4);">
+        <div class="field">
+          <label>Email address</label>
+          <input type="email" data-field="email">
+        </div>
+        <div class="field">
+          <label>Contact phone number</label>
+          <input type="tel" data-field="phone">
+        </div>
+      </div>
+      <div class="field">
+        <label>Role within the business</label>
+        <input type="text" data-field="role">
+      </div>
+      <div class="field">
+        <label>Online Services access required for withdrawals / mandate changes?</label>
+        <div class="option-grid cols-2">
+          <label class="radio-option"><input type="radio" data-field="online_access" value="yes"><span><strong>Yes</strong></span></label>
+          <label class="radio-option"><input type="radio" data-field="online_access" value="no"><span><strong>No</strong></span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Citizen and tax resident of the UK only?</label>
+        <div class="option-grid cols-2">
+          <label class="radio-option"><input type="radio" data-field="uk_tax_resident" value="yes"><span><strong>Yes</strong></span></label>
+          <label class="radio-option"><input type="radio" data-field="uk_tax_resident" value="no"><span><strong>No</strong></span></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" style="color:#fff;">
+          <span class="brand-mark">ES</span>
+          <span class="brand-text"><strong style="color:#fff;">Earl Shilton BS</strong><span>Business Savings Hub</span></span>
+        </a>
+        <p>A focused home for business savings from Earl Shilton Building Society — Business Bonus Saver, Notice and No Notice accounts, open to every type of business.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Business accounts</h4>
+        <ul>
+          <li><a href="bonus-saver.html">Business Bonus Saver</a></li>
+          <li><a href="notice-90-day.html">90 Day Notice</a></li>
+          <li><a href="notice-35-day.html">35 Day Notice</a></li>
+          <li><a href="notice-7-day.html">7 Day Notice</a></li>
+          <li><a href="no-notice.html">No Notice</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="business-types.html">Business Types</a></li>
+          <li><a href="application-guide.html">Application Guide</a></li>
+          <li><a href="apply.html">Apply Online</a></li>
+          <li><a href="help-guides.html">Help Guides</a></li>
+          <li><a href="calculator.html">Savings calculator</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="contact.html">Contact &amp; branches</a></li>
+          <li><a href="tel:+441164960143">0116 496 0143</a></li>
+          <li><a href="mailto:business@earlshiltonbs.example">business@earlshiltonbs.example</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-fscs">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="2" style="flex-shrink:0;"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" stroke-linejoin="round"/></svg>
+      <span>Your eligible deposits with Earl Shilton Building Society are protected up to £120,000 by the Financial Services Compensation Scheme (FSCS). Protection for business deposits depends on your business type and size — see our <a href="help-guides.html#fscs" style="color:#fff;">FSCS guide</a>.</span>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> Earl Shilton Building Society. All rights reserved.</span>
+      <span>Concept Business Savings Hub — illustrative content and rates for demonstration purposes only.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/apply.js"></script>
+</body>
+</html>
